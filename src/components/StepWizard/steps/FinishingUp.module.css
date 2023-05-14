@@ -1,0 +1,66 @@
+.container {
+    background-color: var(--color-alabaster);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+}
+
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan {
+    align-items: center;
+    padding-bottom: 0.4rem;
+}
+
+.plan-title h3{
+    color: var(--color-marine-blue);
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.plan-title button {
+    text-decoration: underline;
+    color: var(--color-cool-gray);
+    font-size: 0.95rem;
+}
+
+.plan-price {
+    color: var(--color-marine-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.add-on-container {
+    border-top: 1px solid var(--color-cool-gray);
+}
+
+.add-on {
+    margin-top: 0.75rem;
+}
+
+.add-on h3 {
+    color: var(--color-cool-gray);
+    font-size: 0.875rem;
+}
+.add-on p {
+    color: var(--color-marine-blue);
+    font-size: 0.9rem;
+}
+
+.total {
+    padding: 1.5rem 1rem 0;
+}
+
+.total h3 {
+    color: var(--color-cool-gray);
+    font-size: 0.9rem;
+}
+
+.total p {
+    color: var(--color-purplish-blue);
+    font-weight: 700;
+}

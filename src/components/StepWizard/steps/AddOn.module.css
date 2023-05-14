@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-cool-gray);
+    margin-top: 0.72rem;
+}
+
+.container.active {
+    border-color: var(--color-marine-blue);
+    background-color: var(--color-alabaster);
+}
+
+.checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--color-cool-gray);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox.checked {
+    background-color: var(--color-purplish-blue);
+}
+
+
+.info{
+    flex: 1 1 0;
+}
+
+.title {
+    color: var(--color-marine-blue);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.desc {
+    color: var(--color-cool-gray);
+    font-size: 0.75rem;
+}
+
+.price {
+    color: var(--color-purplish-blue);
+    font-size: 0.75rem;
+}

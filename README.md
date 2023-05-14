@@ -45,6 +45,9 @@ Users should be able to:
 
 ## My process
 
+- Create All Components blueprint
+- Work on Mobile Design based on `design` folder
+
 ### Built with
 
 ### What I learned

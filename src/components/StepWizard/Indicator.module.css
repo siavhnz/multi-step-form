@@ -1,0 +1,20 @@
+.container {
+    background: url('../../assets/images/bg-sidebar-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 10.75rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.025rem;
+    padding-top: 2rem;
+}
+
+.step {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    align-self: flex-start;
+    border-radius: 100%;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
