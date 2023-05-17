@@ -47,6 +47,7 @@ Users should be able to:
 - Create All Components blueprint
 - Work on Mobile Design based on `design` folder
 - Work on multi-step form functionality
+- Work on Desktop Design based on `design` folder
 
 ### Built with
 

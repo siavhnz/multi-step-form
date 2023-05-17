@@ -1,33 +1,37 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./Wrapper.module.css";
 import { motion } from "framer-motion";
-import { StepWizardContext, StepWizardDataContext } from "../../../store/context/stepwizard-context";
+import { StepWizardContext } from "../../../store/context/stepwizard-context";
 
 const Wrapper = ({ title, desc, children }) => {
 
     const stepCtx = useContext(StepWizardContext);
-    const stepDataCtx = useContext(StepWizardDataContext);
-    const slideRef = useRef(null);
+    const target = useRef(null);
+    const [x, setX] = useState({
+        slideLeftX: window.innerHeight,
+        slideRightX: -(window.innerHeight),
+        width: 0,
+    })
 
     useEffect(() => {
+        const rect = target.current.getBoundingClientRect();
 
-        if (!stepDataCtx.dimentions.isSet) {
-            //set the x value for slide right and left based on div width
-            const offset = slideRef.current.offsetWidth;
-            const slideLeftX = offset + 20
-            const slideRightX = -(offset + 20)
-            stepDataCtx.setDimentions({ slideLeftX, slideRightX, isSet: true })
+        if (rect.width !== x.width) {
+            setX({
+                slideLeftX: rect.width + 100,
+                slideRightX: -(rect.width + 100),
+                width: rect.width
+            })
         }
+    }, [x])
 
-    }, [])
-
+    console.log(x);
     return <motion.div
-        ref={slideRef}
+        ref={target}
         className={styles.container}
         initial={{
             opacity: 0,
-            x: stepCtx.step.status === "next" ? stepDataCtx.dimentions.slideLeftX : stepDataCtx.dimentions.slideRightX,
-
+            x: stepCtx.step.status === "next" ? x.slideLeftX : x.slideRightX
         }}
         animate={{
             opacity: 1,
@@ -35,7 +39,7 @@ const Wrapper = ({ title, desc, children }) => {
         }}
         exit={{
             opacity: 0.4,
-            x: stepCtx.step.status === "next" ? stepDataCtx.dimentions.slideRightX : stepDataCtx.dimentions.slideLeftX,
+            x: stepCtx.step.status === "next" ? x.slideRightX : x.slideLeftX
         }}
         transition={{ duration: 0.8 }}
     >

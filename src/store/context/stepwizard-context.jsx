@@ -16,26 +16,10 @@ export const StepWizardDataContext = createContext({
     addOns: [],
     totalPrice: 0,
 
-    /*
-        this context is used for StepWizard data (user data) 
-        so dimention of wizard in not related to this context but I decided
-        to save that in this context to prevent making more context
-        
-        !!! saving dimentions in context prevent recreating component on each slide
-        or any event and it does not effect wizard slider on resolution changes noticably
-    */
-
-    dimentions: {
-        slideLeftX: 0,
-        slideRightX: 0,
-        isSet: false
-    },
-
     setPersonalInfoData: () => { },
     setPlan: () => { },
     toggleAddOn: (id) => { },
     calculateTotalPrice: () => { },
-    setDimentions: () => { },
 })
 
 
@@ -54,12 +38,7 @@ const StepWizardContextDataProvider = ({ children }) => {
             period: "monthly",
         },
         addOns: [],
-        totalPrice: 0,
-        dimentions: {
-            slideLeftX: 0,
-            slideRightX: 0,
-            isSet: false
-        },
+        totalPrice: 0
     })
 
     const setPersonalInfoData = (personalInfo) => {
@@ -143,26 +122,15 @@ const StepWizardContextDataProvider = ({ children }) => {
         }
     }
 
-    const setDimentions = (dimentions) => {
-        setData((prevState) => {
-            return {
-                ...prevState,
-                dimentions
-            }
-        })
-    }
-
     const value = {
         personalInfo: data.personalInfo,
         plan: data.plan,
         addOns: data.addOns,
         totalPrice: data.totalPrice,
-        dimentions: data.dimentions,
         setPersonalInfoData,
         setPlan,
         toggleAddOn,
         calculateTotalPrice,
-        setDimentions,
     }
 
     return <StepWizardDataContext.Provider value={value}>
@@ -190,7 +158,7 @@ const StepWizardContextProvider = ({ children }) => {
 
     const [data, setData] = useState({
         number: 1,
-        status: "next",// "next"
+        status: "next",// "back"
         waitForValidation: false
     });
 
