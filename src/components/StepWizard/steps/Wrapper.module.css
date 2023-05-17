@@ -2,9 +2,19 @@
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: -4.5rem;
+    margin-bottom: 2rem;
     padding: 1.75rem 1.5rem 2rem;
     background-color: var(--color-white);
     border-radius: 0.5rem;
+
+    /* make all steps in front of each other(in one row)  */
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    /* prevent to be the same size as previous step height */
+    align-self: flex-start;
 }
 
 .title {

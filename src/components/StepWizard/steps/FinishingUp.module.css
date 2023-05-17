@@ -20,12 +20,17 @@
     color: var(--color-marine-blue);
     font-weight: 700;
     font-size: 0.88rem;
+    text-transform: capitalize;
 }
 
 .plan-title button {
     text-decoration: underline;
     color: var(--color-cool-gray);
     font-size: 0.95rem;
+}
+
+.plan-title button:hover {
+    color: var(--color-purplish-blue);
 }
 
 .plan-price {

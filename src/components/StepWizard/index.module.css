@@ -1,4 +1,18 @@
 .container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px)  {
+    .container {
+        max-width: 460px;
+        margin: auto;
+    }
 }

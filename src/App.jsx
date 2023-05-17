@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import StepWizard from './components/StepWizard'
-
+import StepWizardContextProvider from './store/context/stepwizard-context';
 function App() {
 
   return (
-    <StepWizard />
+    <StepWizardContextProvider>
+      <StepWizard />
+    </StepWizardContextProvider>
+
   )
 }
 

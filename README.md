@@ -16,7 +16,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
 ## Overview
 
 ### The challenge
@@ -47,6 +46,7 @@ Users should be able to:
 
 - Create All Components blueprint
 - Work on Mobile Design based on `design` folder
+- Work on multi-step form functionality
 
 ### Built with
 

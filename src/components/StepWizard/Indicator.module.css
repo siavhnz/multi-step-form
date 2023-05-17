@@ -18,3 +18,10 @@
     font-size: 0.875rem;
     line-height: 1.5rem;
 }
+
+.active {
+    background-color: var(--color-light-blue);
+    border-color: var(--color-light-blue);
+    color: var(--color-marine-blue);
+    transition: all 0.8s ease; 
+}

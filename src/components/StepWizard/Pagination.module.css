@@ -5,9 +5,7 @@
     justify-content: space-between;
     padding: 1rem;
 
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
 
 .next {
@@ -16,6 +14,14 @@
     font-size: 0.9rem;
     padding: 0.55rem 1rem;
     border-radius: 0.25rem;
+}
+
+.confirm {
+    background-color: var(--color-purplish-blue);
+}
+
+.confirm:hover {
+    background-color: var(--color-purplish-light-blue);
 }
 
 .prev {

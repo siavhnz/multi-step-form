@@ -3,8 +3,8 @@
 }
 
 .labels {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
 }
 
 .label {
@@ -18,6 +18,11 @@
     color: var(--color-strawberry-red);
     font-size: 0.75rem;
     font-weight: 700;
+    text-align: right;
+
+    /* fix all error messages in one place */
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
 }
 
 .input {
@@ -39,6 +44,7 @@
     color: var(--color-cool-gray);
 }
 
-.input.error {
+.input.border-error {
     border-color: var(--color-strawberry-red);
+    transition: border-color 1s ease;
 }

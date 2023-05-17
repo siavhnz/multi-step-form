@@ -1,20 +1,25 @@
+import { useContext } from "react";
 import { ReactComponent as CheckIcon } from "../../../assets/images/icon-checkmark.svg";
 import styles from "./AddOn.module.css";
+import { StepWizardDataContext } from "../../../store/context/stepwizard-context";
 
-const AddOn = ({ title, desc, price, checked }) => {
+const AddOn = ({ id, title, desc, priceText, priceNumber, selected }) => {
 
-    const checkboxStyle = checked ? `${styles.checkbox} ${styles.checked}` : styles.checkbox;
+    const stepDataCtx = useContext(StepWizardDataContext);
 
-    return <div className={styles.container}>
-        <button className={checkboxStyle} onClick={(e) => e.preventDefault()}>
-            {checked && <CheckIcon aria-hidden="true" focusable="false" />}
+    const checkboxStyle = selected ? `${styles.checkbox} ${styles.checked}` : styles.checkbox;
+    const containerStyle = selected ? `${styles.container} ${styles.active}` : styles.container;
+
+    return <div className={containerStyle} onClick={() => stepDataCtx.toggleAddOn({ id, title, price: priceNumber })}>
+        <button className={checkboxStyle}>
+            {selected && <CheckIcon aria-hidden="true" focusable="false" />}
         </button>
         <div className={styles.info}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.desc}>{desc}</p>
         </div>
         <p className={styles.price}>
-            {price}
+            {priceText}
         </p>
     </div>
 }

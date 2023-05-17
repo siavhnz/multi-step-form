@@ -5,19 +5,33 @@
     border: 1px solid var(--color-cool-gray);
     border-radius: 0.5rem;
     margin-top: 0.8rem;
+    cursor: pointer;
 }
 
 .container.active {
     border-color: var(--color-marine-blue);
     background-color: var(--color-alabaster);
-}
-.title {
-    color: var(--color-marine-blue);
+    transition: all 0.8s ease; 
 }
 
-.desc {
+.title {
+    color: var(--color-marine-blue);
+    text-transform: capitalize;
+}
+
+.price {
     color: var(--color-cool-gray);
     font-size: 0.85rem;
+    animation: show 0.5s ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0,
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .discount {
