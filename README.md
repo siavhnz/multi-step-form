@@ -34,13 +34,13 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](./screenshot/screenshot.jpg)
+![screenshot](./screenshot/screenshot.png)
 
 ### Links
 
-- Solution: [frontendmentor.io](https://www.frontendmentor.io/solutions/?)
+- Solution: [frontendmentor.io](https://www.frontendmentor.io/solutions/multi-step-form-5MLk0OYh4I)
 
-- Live Site: [netlify.app](https://?.netlify.app)
+- Live Site: [netlify.app](https://multi-step-form.pages.dev/)
 
 ## My process
 
@@ -51,17 +51,30 @@ Users should be able to:
 
 ### Built with
 
+- React
+- Framer Motion
+- Css Module
+- Grid, Flex, Custom variable
+- Semantic HTML5 markup
+- Mobile first workflow
+
 ### What I learned
+
+Creating slider, and pagination with a central button was the tricky part that I learned a lot from them.
 
 ### Continued development
 
+More practice on framer motion and as always React
+
 ### Useful resources
+
+[Framer Motion](https://framer.com/motion)
 
 ## Author
 
-- github - [@siavhnz](https://www.github.com/siavhnz)
-
 - Frontend Mentor - [@siavhnz](https://www.frontendmentor.io/profile/siavhnz)
+
+- github - [@siavhnz](https://www.github.com/siavhnz)
 
 ## Acknowledgments
 
