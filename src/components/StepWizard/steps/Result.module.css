@@ -31,32 +31,20 @@
 
 @media (min-width: 50em)  { /* 800px*/
     .container {
-        margin-top: 2.5rem;
+        margin-top: 8rem;
         margin-bottom: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        justify-items: center;
-    }
-
-    .empty {
-        display: block;
-        padding-top: 5.5rem;
     }
 
     .container svg {
         width: 5rem;
-        grid-row: 2 / 3;
     }
 
     .container h2 {
         font-size: 2rem;
-        margin-top: 1.25rem;
-        grid-row: 3 / 4;
+        margin-top: 1.5rem;
     }
 
     .container p {
-        margin-top: 0.25rem;
-        grid-row: 4 / 5
+         margin-top: 0.25rem;
     }
 }
