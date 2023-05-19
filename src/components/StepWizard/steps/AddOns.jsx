@@ -28,13 +28,13 @@ const AddOns = () => {
     return <Wrapper
         title="Pick add-ons"
         desc="Add-ons help enhance your gaming experience.">
-            
+
         {
             // create add-ons based on data
             data.addOns.items.map((item, index) => {
 
                 // create price object for presenting in UI {text} and saving in context {number}
-                const price = (stepDataCtx.plan.period === PERIOD.MONTHLY) ? { text: `$${item.price.monthly}/mo`, number: item.price.monthly } : { text: `$${item.price.yearly}/year`, number: item.price.yearly }
+                const price = (stepDataCtx.plan.period === PERIOD.MONTHLY) ? { text: `+$${item.price.monthly}/mo`, number: item.price.monthly } : { text: `+$${item.price.yearly}/yr`, number: item.price.yearly }
                 const selected = stepDataCtx.addOns.filter((x) => x.id === item.id).length > 0;
                 return <AddOn
                     key={index}

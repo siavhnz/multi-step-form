@@ -39,3 +39,12 @@
     font-size: 0.75rem;
     margin-top: 0.25rem;
 }
+
+
+@media (min-width: 50em)  { /* 800px*/
+    .container {
+        flex-direction: column;
+        flex:1 1 0;
+        row-gap: 2.5rem;
+    }
+}

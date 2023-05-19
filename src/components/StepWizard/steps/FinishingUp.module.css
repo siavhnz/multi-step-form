@@ -26,7 +26,7 @@
 .plan-title button {
     text-decoration: underline;
     color: var(--color-cool-gray);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
 }
 
 .plan-title button:hover {
@@ -40,7 +40,7 @@
 }
 
 .add-on-container {
-    border-top: 1px solid var(--color-cool-gray);
+    border-top: 1px solid var(--color-light-gray);
 }
 
 .add-on {
@@ -68,4 +68,36 @@
 .total p {
     color: var(--color-purplish-blue);
     font-weight: 700;
+}
+
+
+@media (min-width: 50em)  { /* 800px*/
+    .container{
+        padding: 1.5rem;
+    }
+    
+    .plan {
+        padding-bottom: 1.25rem;
+    }
+
+    .plan-title h3{ 
+        font-size: 1rem;
+    }
+
+    .plan-price {
+        font-size: 1rem;
+    }
+
+    .add-on {
+        margin-top: 1rem;
+    }
+
+    .total {
+        padding: 1.5rem 1.5rem 0;
+    }
+
+    .total p {
+        font-size: 1.25rem;
+        margin-top: -0.5rem;
+    }
 }

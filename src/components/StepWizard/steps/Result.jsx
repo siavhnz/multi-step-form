@@ -5,6 +5,7 @@ import { ReactComponent as ThanksIcon } from "../../../assets/images/icon-thank-
 const Result = () => {
     return <Wrapper>
         <div className={styles.container}>
+            <div className={styles.empty}></div>
             <ThanksIcon aria-hidden="true" focusable="false" />
             <h2>Thank you!</h2>
             <p>

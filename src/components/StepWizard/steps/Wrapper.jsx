@@ -18,28 +18,27 @@ const Wrapper = ({ title, desc, children }) => {
 
         if (rect.width !== x.width) {
             setX({
-                slideLeftX: rect.width + 100,
+                slideLeftX: (rect.width + 100),
                 slideRightX: -(rect.width + 100),
                 width: rect.width
             })
         }
     }, [x])
 
-    console.log(x);
     return <motion.div
         ref={target}
         className={styles.container}
         initial={{
             opacity: 0,
-            x: stepCtx.step.status === "next" ? x.slideLeftX : x.slideRightX
+            x: stepCtx.step.status === "next" ? x.slideLeftX : x.slideRightX,
         }}
         animate={{
             opacity: 1,
             x: 0,
         }}
         exit={{
-            opacity: 0.4,
-            x: stepCtx.step.status === "next" ? x.slideRightX : x.slideLeftX
+            opacity: 0,
+            x: stepCtx.step.status === "next" ? x.slideRightX : x.slideLeftX,
         }}
         transition={{ duration: 0.8 }}
     >

@@ -75,28 +75,30 @@ const Plans = () => {
     return <Wrapper
         title="Select your plan"
         desc="You have the option of monthly or yearly billing.">
+        <div className={styles.container}>
+            {
+                // create plans based on data in store/utils/data.js
 
-        {
-            // create plans based on data in store/utils/data.js
-            data.plans.items.map((item) => {
+                data.plans.items.map((item) => {
 
-                // set icon based on specific plan
-                const icon = getIcon(item.name);
+                    // set icon based on specific plan
+                    const icon = getIcon(item.name);
 
-                // create price object for presenting in UI {text} and saving in context {number}
-                const price = (stepDataCtx.plan.period === PERIOD.MONTHLY) ? { text: `$${item.price.monthly}/mo`, number: item.price.monthly } : { text: `$${item.price.yearly}/year`, number: item.price.yearly }
-                return <Plan
-                    key={item.name}
-                    name={item.name}
-                    period={stepDataCtx.plan.period}
-                    selectedPlan={stepDataCtx.plan.name}
-                    icon={icon}
-                    priceText={price.text}
-                    priceNumber={price.number}
-                    discount={(stepDataCtx.plan.period === PERIOD.MONTHLY) ? "" : data.plans.discount} />
+                    // create price object for presenting in UI {text} and saving in context {number}
+                    const price = (stepDataCtx.plan.period === PERIOD.MONTHLY) ? { text: `$${item.price.monthly}/mo`, number: item.price.monthly } : { text: `$${item.price.yearly}/yr`, number: item.price.yearly }
+                    return <Plan
+                        key={item.name}
+                        name={item.name}
+                        period={stepDataCtx.plan.period}
+                        selectedPlan={stepDataCtx.plan.name}
+                        icon={icon}
+                        priceText={price.text}
+                        priceNumber={price.number}
+                        discount={(stepDataCtx.plan.period === PERIOD.MONTHLY) ? "" : data.plans.discount} />
 
-            })
-        }
+                })
+            }
+        </div>
 
         {/* toggle between yearly and monthly plans */}
         <div className={styles.switch}>

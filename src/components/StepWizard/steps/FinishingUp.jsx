@@ -34,7 +34,7 @@ const FinishingUp = () => {
                         {stepDataCtx.plan.name} ({stepDataCtx.plan.period})
                     </h3>
                     <button onClick={(e) => stepCtx.backToSpecificStep(e, 2)}>
-                        change
+                        Change
                     </button>
                 </div>
                 <p className={styles["plan-price"]}>
@@ -54,7 +54,7 @@ const FinishingUp = () => {
                                 </h3>
                                 <p>
                                     {
-                                        (stepDataCtx.plan.period === PERIOD.MONTHLY) ? `$${item.price}/mo` : `$${item.price}/yr`
+                                        (stepDataCtx.plan.period === PERIOD.MONTHLY) ? `+$${item.price}/mo` : `+$${item.price}/yr`
                                     }
                                 </p>
                             </div>
@@ -67,11 +67,11 @@ const FinishingUp = () => {
         </div>
         <div className={`${styles["space-between"]} ${styles.total}`}>
             <h3>
-                Total(per {(stepDataCtx.plan.period === PERIOD.MONTHLY) ? "month" : "year"})
+                Total (per {(stepDataCtx.plan.period === PERIOD.MONTHLY) ? "month" : "year"})
             </h3>
             <p>
                 {
-                    (stepDataCtx.plan.period === PERIOD.MONTHLY) ? `$${stepDataCtx.totalPrice}/mo` : `$${stepDataCtx.totalPrice}/yr`
+                    (stepDataCtx.plan.period === PERIOD.MONTHLY) ? `+$${stepDataCtx.totalPrice}/mo` : `+$${stepDataCtx.totalPrice}/yr`
                 }
             </p>
         </div>

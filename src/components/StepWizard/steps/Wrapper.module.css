@@ -1,17 +1,14 @@
 .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: -4.5rem;
-    margin-bottom: 2rem;
+    margin: -4.5rem 1rem 2rem;
     padding: 1.75rem 1.5rem 2rem;
     background-color: var(--color-white);
     border-radius: 0.5rem;
 
     /* make all steps in front of each other(in one row)  */
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: -1;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: -1;
 
     /* prevent to be the same size as previous step height */
     align-self: flex-start;
@@ -28,4 +25,26 @@
     padding-bottom: 0.5rem;
     color: var(--color-cool-gray);
     font-weight: 400;
+}
+
+@media (min-width: 50em)  { /* 800px*/
+    .container {
+        margin: 0.5rem 1rem 1rem;
+        min-height: 29em; /* 464px */
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .desc {
+        margin-top: 0.25rem;
+        padding-bottom: 0.85rem;
+    }
+}
+
+@media (min-width: 64em)  { /* 1024px*/
+    .container {
+        margin-left: 4.8rem;
+        margin-right: 3.8rem;
+    }
 }

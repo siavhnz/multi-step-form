@@ -7,6 +7,10 @@
     margin-bottom: 3rem;
 }
 
+.empty {
+    display: none;
+}
+
 .container svg {
     width: 3.5rem;
 }
@@ -22,4 +26,37 @@
     text-align: center;
     color: var(--color-cool-gray);
     line-height: 1.55rem;
+}
+
+
+@media (min-width: 50em)  { /* 800px*/
+    .container {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        justify-items: center;
+    }
+
+    .empty {
+        display: block;
+        padding-top: 5.5rem;
+    }
+
+    .container svg {
+        width: 5rem;
+        grid-row: 2 / 3;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+        margin-top: 1.25rem;
+        grid-row: 3 / 4;
+    }
+
+    .container p {
+        margin-top: 0.25rem;
+        grid-row: 4 / 5
+    }
 }

@@ -1,6 +1,30 @@
 //maybe this data comes from a server and loaded on a trusted data source like useState
 
 export const data = {
+    steps: {
+        items: [
+            {
+                number: 1,
+                text: "step 1",
+                desc: "your info",
+            },
+            {
+                number: 2,
+                text: "step 2",
+                desc: "select plan",
+            },
+            {
+                number: 3,
+                text: "step 3",
+                desc: "add-ons",
+            },
+            {
+                number: 4,
+                text: "step 4",
+                desc: "summary",
+            },
+        ]
+    },
     plans: {
         items: [
             {
@@ -16,7 +40,7 @@ export const data = {
                 price: {monthly: 15, yearly: 150}
             } 
         ],
-        discount: "2 month free"
+        discount: "2 months free"
     },
     addOns: {
         items: [

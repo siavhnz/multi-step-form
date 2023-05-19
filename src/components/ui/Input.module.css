@@ -48,3 +48,22 @@
     border-color: var(--color-strawberry-red);
     transition: border-color 1s ease;
 }
+
+@media (min-width: 50em)  { /* 800px*/
+    .container {
+        margin-top: 1.3rem;
+    }
+
+    .label,
+    .error {
+        font-size: 0.85rem;
+
+    }
+
+    .input {
+        margin-top: 0.45rem;
+        border-radius: 0.5rem;
+        font-size: 1.03rem;
+        padding: 0.65rem 1rem;
+    }
+}

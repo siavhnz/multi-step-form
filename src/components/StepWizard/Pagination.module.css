@@ -4,7 +4,6 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 1rem;
-
     margin-top: auto;
 }
 
@@ -27,4 +26,41 @@
 .prev {
     color: var(--color-cool-gray);
     font-size: 0.9rem;
+}
+
+.prev:hover {
+    color: var(--color-marine-blue);
+}
+
+@media (min-width: 50em)  { /* 800px*/
+    .container {
+        grid-area: pagination;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .next {
+        font-size: 1rem;
+        padding: 0.75rem 1.65rem;
+        border-radius: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .confirm {
+        padding: 0.75rem 2rem;
+    }
+
+    .prev {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    
+}
+
+
+@media (min-width: 64em)  { /* 1024px*/
+    .container {
+        margin-left: 4.8rem;
+        margin-right: 3.8rem;
+    }
 }
